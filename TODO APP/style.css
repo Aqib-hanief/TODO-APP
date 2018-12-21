@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #cacbc1;
+    padding: 80px 0 0 0;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 6;
+    background: #505d58;
+    box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+}
+
+header input {
+    min-width: 100%;
+    height: 50px;
+    padding: 0 60px 0 0;
+    float: left;
+    background: #f5efec;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    appearance: none;
+    color:#505d58;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+header input::-webkit-input-placeholder {
+   opacity: 0.766;
+}
+
+header button {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 3;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: #f5efec;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+
+header button img {
+    padding-right: 10px;
+}
+
+ul.todo {
+    width: 100%;
+    float: left;
+}
+
+ul.todo li {
+    width: 100%;
+    
+    float: left;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 22px;
+    position: relative;
+    background: #969f95;
+    box-shadow: 0 1px 2px rgba(80, 93, 88, 0.10);
+    margin: 0 0  12px 0;
+    padding: 9px 100px 9px 9px;
+}
+
+ul.todo li:last-of-type {
+    margin: 0;
+}
+
+ul.todo li .buttons {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top:0;
+    right:0;
+    
+}
+
+ul.todo li .buttons button{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+ul.todo:not(#completed) li {
+    text-decoration: none;
+}
+ul.todo#completed li {
+    text-decoration: line-through;
+}
+
+ul.todo#completed {
+    position: relative;
+    padding: 60px 0 0 0;
+}
+ul.todo#completed:before {
+    content :'';
+    width: 150px;
+    height: 1px;
+    background: #505d58;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+}
